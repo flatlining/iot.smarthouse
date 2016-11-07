@@ -1,0 +1,38 @@
+<mvc:View controllerName="co.schertel.iot.smarthouse.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Page title="{i18n>appTitle}">
+		<customHeader></customHeader>
+		<content>
+			<GenericTile id="home-genericTile-temperatureLogs" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+				header="{i18n>temperatureLogs.title}" press="onTilePress" data:targetRoute="temperatureLogs">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://temperature"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+			<GenericTile id="home-genericTile-humidityLogs" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+				header="{i18n>humidityLogs.title}" press="onTilePress" data:targetRoute="humidityLogs">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://cloud"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+			<GenericTile id="home-genericTile-ledControl" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="{i18n>ledControl.title}"
+				press="onTilePress" data:targetRoute="ledControl">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://lightbulb"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+		</content>
+	</Page>
+</mvc:View>

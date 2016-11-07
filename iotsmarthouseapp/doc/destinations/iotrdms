@@ -1,0 +1,15 @@
+#Password=<TODO:hcp_account_password>
+#
+#Mon Nov 07 01:07:09 UTC 2016
+Description=Remote Device Management Service
+Type=HTTP
+TrustAll=true
+Authentication=BasicAuthentication
+WebIDEUsage=svc_mgmt
+Name=iotrdms
+WebIDEEnabled=true
+CloudConnectorVersion=2
+URL=https\://iotrdmsiotservices-<TODO:hcp_account_name>.hanatrial.ondemand.com/com.sap.iotservices.dms/api/
+ProxyType=Internet
+User=<TODO:hcp_account_user>
+WebIDESystem=iotrdms

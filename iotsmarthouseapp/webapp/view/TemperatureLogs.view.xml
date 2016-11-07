@@ -1,0 +1,45 @@
+<mvc:View controllerName="co.schertel.iot.smarthouse.controller.TemperatureLogs" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page title="{i18n>temperatureLogs.title}">
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button id="header-button-navBack" type="Back" tooltip="{i18n>back}" press="navBack"/>
+				</contentLeft>
+				<contentMiddle>
+					<Title id="header-title-title" text="{i18n>temperatureLogs.title}"/>
+				</contentMiddle>
+				<contentRight>
+					<Button id="header-button-reload" tooltip="{i18n>reload}" icon="sap-icon://refresh" press="refreshModel"/>
+					<Button id="header-button-temperatureChart" tooltip="{i18n>temperatureChart.title}" icon="sap-icon://line-chart-time-axis"
+						press="goToTemperatureChart"/>
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+			<Table id="temperatureLogs-table-logs" inset="false"
+				items="{ path: '/<TODO:temperature_endpoint_on_message_service>', sorter: { path: 'G_CREATED', descending: 'true' } }" growing="true" growingThreshold="15">
+				<columns>
+					<Column>
+						<Text text="{i18n>created}"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" mergeDuplicates="false">
+						<Text text="{i18n>device}"/>
+					</Column>
+					<Column hAlign="End">
+						<Text text="{i18n>temperature}"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{ path: 'G_CREATED', type: 'sap.ui.model.type.DateTime', formatOptions: { style: 'long' } }"/>
+							<Text text="{ path: 'G_DEVICE', formatter: '.formatter.deviceNameFromId' }"/>
+							<ObjectNumber number="{C_TEMPERATURE}" unit="{i18n>temperatureUnit}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>

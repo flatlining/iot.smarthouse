@@ -1,0 +1,38 @@
+<mvc:View controllerName="co.schertel.iot.smarthouse.controller.HumidityChart" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data" height="100%">
+	<Page title="{i18n>humidityChart.title}">
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button id="header-button-navBack" type="Back" press="navBack" tooltip="{i18n>back}"/>
+				</contentLeft>
+				<contentMiddle>
+					<Title id="header-title-title" text="{i18n>humidityChart.title}"/>
+				</contentMiddle>
+				<contentRight>
+					<Button id="header-button-reload" tooltip="{i18n>reload}" icon="sap-icon://refresh" press="refreshModel"/>
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+			<viz:VizFrame id="humidityChart-vizFrame-chart" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType="timeseries_line"
+				legendVisible="false">
+				<viz:dataset>
+					<viz.data:FlattenedDataset data="{/<TODO:humidity_endpoint_on_message_service>}">
+						<viz.data:dimensions>
+							<viz.data:DimensionDefinition name="{i18n>date}" value="{G_CREATED}" dataType="date"/>
+						</viz.data:dimensions>
+						<viz.data:measures>
+							<viz.data:MeasureDefinition name="{i18n>humidity}" value="{C_HUMIDITY}"/>
+						</viz.data:measures>
+					</viz.data:FlattenedDataset>
+				</viz:dataset>
+				<viz:feeds>
+					<viz.feeds:FeedItem uid="valueAxis" type="Measure" values="{i18n>humidity}"/>
+					<viz.feeds:FeedItem uid="timeAxis" type="Dimension" values="{i18n>date}"/>
+				</viz:feeds>
+			</viz:VizFrame>
+		</content>
+	</Page>
+</mvc:View>

@@ -1,0 +1,22 @@
+<mvc:View controllerName="co.schertel.iot.smarthouse.controller.LedControl" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page title="{i18n>ledControl.title}">
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button id="header-button-navBack" type="Back" tooltip="{i18n>back}" press="navBack"/>
+				</contentLeft>
+				<contentMiddle>
+					<Title id="header-title-title" text="{i18n>ledControl.title}"/>
+				</contentMiddle>
+				<contentRight></contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+			<HBox class="sapUiSmallMargin" alignItems="Center">
+				<Label class="sapUiSmallMargin" labelFor="ledControl-switch-ledState" text="{i18n>ledState}"/>
+				<Switch class="sapUiSmallMargin" id="ledControl-switch-ledState" state="false" change="changeLedState"/>
+			</HBox>
+		</content>
+	</Page>
+</mvc:View>

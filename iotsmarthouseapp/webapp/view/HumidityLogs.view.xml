@@ -1,0 +1,45 @@
+<mvc:View controllerName="co.schertel.iot.smarthouse.controller.HumidityLogs" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page title="{i18n>humidityLogs.title}">
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button id="header-button-navBack" type="Back" tooltip="{i18n>back}" press="navBack"/>
+				</contentLeft>
+				<contentMiddle>
+					<Title id="header-title-title" text="{i18n>humidityLogs.title}"/>
+				</contentMiddle>
+				<contentRight>
+					<Button id="header-button-reload" tooltip="{i18n>reload}" icon="sap-icon://refresh" press="refreshModel"/>
+					<Button id="header-button-temperatureChart" tooltip="{i18n>humidityChart.title}" icon="sap-icon://line-chart-time-axis"
+						press="goToHumidityChart"/>
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+			<Table id="humidityLogs-table-logs" inset="false"
+				items="{ path: '/<TODO:humidity_endpoint_on_message_service>', sorter: { path: 'G_CREATED', descending: 'true' } }" growing="true" growingThreshold="15">
+				<columns>
+					<Column>
+						<Text text="{i18n>created}"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true" mergeDuplicates="false">
+						<Text text="{i18n>device}"/>
+					</Column>
+					<Column hAlign="End">
+						<Text text="{i18n>humidity}"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{ path: 'G_CREATED', type: 'sap.ui.model.type.DateTime', formatOptions: { style: 'long' } }"/>
+							<Text text="{ path: 'G_DEVICE', formatter: '.formatter.deviceNameFromId' }"/>
+							<ObjectNumber number="{C_HUMIDITY}" unit="{i18n>humidityUnit}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>

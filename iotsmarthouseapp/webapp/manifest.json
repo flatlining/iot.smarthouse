@@ -1,0 +1,170 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "co.schertel.iot.smarthouse",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		},
+		"dataSources": {
+			"iotmms": {
+				"uri": "/destinations/iotmms/app.svc/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "model/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "co.schertel.iot.smarthouse.view.App",
+			"type": "XML"
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "co.schertel.iot.smarthouse.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "home",
+					"target": "home"
+				},
+				{
+					"pattern": "temperature",
+					"name": "temperatureLogs",
+					"target": "temperatureLogs"
+				},
+				{
+					"pattern": "temperature/chart",
+					"name": "temperatureChart",
+					"target": "temperatureChart"
+				},
+				{
+					"pattern": "humidity",
+					"name": "humidityLogs",
+					"target": "humidityLogs"
+				},
+				{
+					"pattern": "humidity/chart",
+					"name": "humidityChart",
+					"target": "humidityChart"
+				},
+				{
+					"pattern": "ledControl",
+					"name": "ledControl",
+					"target": "ledControl"
+				}
+			],
+			"targets": {
+				"home": {
+					"viewName": "Home",
+					"viewLevel": 1
+				},
+				"temperatureLogs": {
+					"viewName": "TemperatureLogs",
+					"viewLevel": 2
+				},
+				"temperatureChart": {
+					"viewName": "TemperatureChart",
+					"viewLevel": 3
+				},
+				"humidityLogs": {
+					"viewName": "HumidityLogs",
+					"viewLevel": 2
+				},
+				"humidityChart": {
+					"viewName": "HumidityChart",
+					"viewLevel": 3
+				},
+				"ledControl": {
+					"viewName": "LedControl",
+					"viewLevel": 2
+				}
+			}
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "co.schertel.iot.smarthouse.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "iotmms",
+				"preload": true
+			},
+			"iotDevices": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "/destinations/iotrdms/devices",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}
