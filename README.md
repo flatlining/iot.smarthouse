@@ -2,6 +2,13 @@
 
 A simple project that showcases the use of [Hana Cloud Platform](https://account.hanatrial.ondemand.com/) service for [Internet of Things](https://hcp.sap.com/capabilities/iot.html) connecting to a [ESP3266](https://espressif.com/en/products/hardware/esp8266ex/overview) board using the [mqtt](http://mqtt.org/) protocol.
 
+## Structure
+
+- /iotsmarthouseapp/: HTML application for SAP HCP
+  - /doc/: app specific documentation, e.g.: required destination files
+- /iotsmarthouseesp/: Firmware for esp8266ex
+  - /doc/: firmware specific documentation, e.g.: board layout & ESP8266 pinout
+
 ## Requirements
 
 ### Knowledge
@@ -206,6 +213,10 @@ All placeholders use the pattern **&lt;TODO:placeHolderName&gt;**, so simply use
 #### App code to HCP
 
 It's not on the scope of this tutorial to tech how to deploy a HTML application to HCP, you can check the [official documentation](https://sapui5.hana.ondemand.com/) for help.
+
+##### Destinations
+
+~under construction~
 
 #### Firmware to ESP8266
 
