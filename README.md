@@ -2,6 +2,10 @@
 
 A simple project that showcases the use of [Hana Cloud Platform](https://account.hanatrial.ondemand.com/) service for [Internet of Things](https://hcp.sap.com/capabilities/iot.html) connecting to a [ESP3266](https://espressif.com/en/products/hardware/esp8266ex/overview) board using the [mqtt](http://mqtt.org/) protocol.
 
+## How to contribute
+
+If you want to contribute by adding features or fixing bugs feel free to create a [pull resquest](https://github.com/flatlining/iot.smarthouse/pulls) or open an [issue](https://github.com/flatlining/iot.smarthouse/issues).
+
 ## Structure
 
 - /iotsmarthouseapp/: HTML application for SAP HCP
@@ -216,7 +220,11 @@ It's not on the scope of this tutorial to tech how to deploy a HTML application 
 
 ##### Destinations
 
-~under construction~
+For the app to access both MMS and IoT Services information, is required to add both destinations to your HCP.
+
+You can find the destination files to import in the `/doc/` folder of the `/iotsmarthouseesp/` project, just make sure to replace the placeholders with the correct values.
+
+Refer to the official documentation on how to [configure](https://help.hana.ondemand.com/help/60735ad11d8a488c83537cdcfb257135.html) and [import](https://help.hana.ondemand.com/help/frameset.htm?a2550c3fcf2b430f94f99072677bf9ec.html) destinations.
 
 #### Firmware to ESP8266
 
