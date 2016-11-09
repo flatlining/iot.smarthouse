@@ -22,6 +22,32 @@ A simple project that showcases the use of [Hana Cloud Platform](https://account
 - App development can be done with HCP [Web IDE](https://hcp.sap.com/capabilities/devops/web-ide.html) or any local editor like [Atom](https://atom.io/)
 - Although the ESP8266 development was done using  [PlatformIO](http://platformio.org/), is also possible to use the [Arduino IDE](https://www.arduino.cc/en/Main/Software) with little work 
 
+## Tutorial
+
+### Cheat Sheet
+
+During the deployment of the solution, some customization with your personal data will be required. to make it easy to remember values that need to be customized is recomender to copy-paste the following cheat sheet:
+
+Variable | Description | Example
+---------|-------------|--------
+hcpAccount | |
+hcpUser | |
+hcpPassword | |
+iotSrvMessageTypeHumidity | |
+iotSrvMessageTypeTemperature | |
+iotSrvMessageTypeLedControl | |
+iotSrvDeviceId | |
+iotSrvDeviceToken | |
+msgSrvMqttDataTopic | |
+msgSrvMqttPushTopic | |
+msgSrvHumidityEndpoint | |
+msgSrvTemperatureEndpoint | |
+wifiSsid | |
+wifiPassword | |
+mqttServer | |
+mqttServerPort | |
+mqttClientName | |
+
 ## References
 
 * [SAP HANA Cloud Platform Internet of Things Services](https://help.hana.ondemand.com/iot/frameset.htm)
