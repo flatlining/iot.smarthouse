@@ -2,6 +2,26 @@
 
 A simple project that showcases the use of [Hana Cloud Platform](https://account.hanatrial.ondemand.com/) service for [Internet of Things](https://hcp.sap.com/capabilities/iot.html) conecting to a [ESP3266](https://espressif.com/en/products/hardware/esp8266ex/overview) board using the [mqtt](http://mqtt.org/) protocol.
 
+## Requirements
+
+### Knowledge
+
+- For the **Internet**
+  - [HCP](https://open.sap.com/courses/hanacloud1)
+  - HTML
+  - JavaScript
+  - GIT
+- For the **Things**
+  - Programming language / programming logic
+  - Arduino or related prototyping platforms
+  - C++ knowledge is a plus (ba dum tssshhh)
+  - Eletronic knowledge is nice but not required
+
+### Tools
+
+- App development can be done with HCP [Web IDE](https://hcp.sap.com/capabilities/devops/web-ide.html) or any local editor like [Atom](https://atom.io/)
+- Although the ESP8266 development was done using  [PlatformIO](http://platformio.org/), is also possible to use the [Arduino IDE](https://www.arduino.cc/en/Main/Software) with little work 
+
 ## References
 
 * [SAP HANA Cloud Platform Internet of Things Services](https://help.hana.ondemand.com/iot/frameset.htm)
