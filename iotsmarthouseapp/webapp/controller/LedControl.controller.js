@@ -11,7 +11,7 @@ sap.ui.define([
 			var jsonBody = {
 				"method": "mqtt",
 				"sender": "iotsmarthouseapp",
-				"messageType": "<TODO:message_type_on_iot_services_for_led_control>",
+				"messageType": "<TODO:iotSrvMessageTypeLedControl>",
 				"messages": [{
 					"lightId": ledId
 				}]
@@ -19,7 +19,7 @@ sap.ui.define([
 
 			var oModel = new sap.ui.model.json.JSONModel();
 			oModel.loadData(
-				"/destinations/iotmms/push/<TODO:device_id_on_iot_services>",
+				"/destinations/iotmms/push/<TODO:iotSrvDeviceId>",
 				JSON.stringify(jsonBody),
 				true,
 				"POST",
