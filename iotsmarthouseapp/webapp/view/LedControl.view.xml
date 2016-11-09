@@ -1,5 +1,5 @@
 <mvc:View controllerName="co.schertel.iot.smarthouse.controller.LedControl" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
 	<Page title="{i18n>ledControl.title}">
 		<customHeader>
 			<Bar>
@@ -14,8 +14,8 @@
 		</customHeader>
 		<content>
 			<HBox class="sapUiSmallMargin" alignItems="Center">
-				<Label class="sapUiSmallMargin" labelFor="ledControl-switch-ledState" text="{i18n>ledState}"/>
-				<Switch class="sapUiSmallMargin" id="ledControl-switch-ledState" state="false" change="changeLedState"/>
+				<Label class="sapUiSmallMargin" labelFor="ledControl-button-ledState" text="{i18n>ledState}"/>
+				<Button class="sapUiSmallMargin" id="ledControl-button-ledState" press="changeLedState" text="{i18n>toggle}" data:ledId="5"/>
 			</HBox>
 		</content>
 	</Page>

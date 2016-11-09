@@ -5,14 +5,15 @@ sap.ui.define([
 
 	return Controller.extend("co.schertel.iot.smarthouse.controller.LedControl", {
 		changeLedState: function(oEvent) {
-			var buttonState = oEvent.getParameters().state;
+			var ledId = parseInt(oEvent.getSource().data("ledId"));
+			console.log("ledId " + ledId);
 
 			var jsonBody = {
 				"method": "mqtt",
 				"sender": "iotsmarthouseapp",
 				"messageType": "<TODO:message_type_on_iot_services_for_led_control>",
 				"messages": [{
-					"isOn": buttonState
+					"lightId": ledId
 				}]
 			};
 
