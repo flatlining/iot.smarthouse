@@ -28,25 +28,25 @@ A simple project that showcases the use of [Hana Cloud Platform](https://account
 
 During the deployment of the solution, some customization with your personal data will be required. to make it easy to remember values that need to be customized is recomender to copy-paste the following cheat sheet:
 
-Variable | Description | Example
----------|-------------|--------
-hcpAccount | |
-hcpUser | |
-hcpPassword | |
-iotSrvMessageTypeHumidity | |
-iotSrvMessageTypeTemperature | |
-iotSrvMessageTypeLedControl | |
-iotSrvDeviceId | |
-iotSrvDeviceToken | |
-msgSrvMqttDataTopic | |
-msgSrvMqttPushTopic | |
-msgSrvHumidityEndpoint | |
-msgSrvTemperatureEndpoint | |
-wifiSsid | |
-wifiPassword | |
-mqttServer | |
-mqttServerPort | |
-mqttClientName | |
+Variable | Example | Your Values
+---------|---------|------------
+hcpAccount | p123456trial |
+hcpUser | p123456 |
+hcpPassword | 654321 |
+iotSrvMessageTypeHumidity | f7a21c819057c93f4ae2 |
+iotSrvMessageTypeTemperature | 3e379b643794dfa2fc6d |
+iotSrvMessageTypeLedControl | d417504b02b488b1c74b |
+iotSrvDeviceId | b3da17f6-8e41-48e4-8540-9bfe5124f7ec |
+iotSrvDeviceToken | a2bR9YGwUVFZyeuMpaKwBpZpzbSrsJd |
+msgSrvMqttDataTopic | iot/data/iotmmsp123456trial/v1/b3da17f6-8e41-48e4-8540-9bfe5124f7ec |
+msgSrvMqttPushTopic | iot/push/iotmmsp123456trial/v1/b3da17f6-8e41-48e4-8540-9bfe5124f7ec |
+msgSrvHumidityEndpoint | T_IOT_F7A21C819057C93F4AE2 |
+msgSrvTemperatureEndpoint | T_IOT_3E379B643794DFA2FC6D |
+wifiSsid | MyHomeInternet |
+wifiPassword | mySuperSTRONGP4ssw0rd |
+mqttServer | iot.eclipse.org |
+mqttServerPort | 1883 |
+mqttClientName | my-iot-sensor |
 
 ## References
 
