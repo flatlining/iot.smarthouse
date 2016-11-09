@@ -18,7 +18,7 @@
 		</customHeader>
 		<content>
 			<Table id="temperatureLogs-table-logs" inset="false"
-				items="{ path: '/<TODO:temperature_endpoint_on_message_service>', sorter: { path: 'G_CREATED', descending: 'true' } }" growing="true" growingThreshold="15">
+				items="{ path: '/<TODO:msgSrvTemperatureEndpoint>', sorter: { path: 'G_CREATED', descending: 'true' } }" growing="true" growingThreshold="15">
 				<columns>
 					<Column>
 						<Text text="{i18n>created}"/>
