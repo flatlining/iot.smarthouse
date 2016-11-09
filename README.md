@@ -20,7 +20,7 @@ A simple project that showcases the use of [Hana Cloud Platform](https://account
 ### Tools
 
 - App development can be done with HCP [Web IDE](https://hcp.sap.com/capabilities/devops/web-ide.html) or any local editor like [Atom](https://atom.io/)
-- Although the ESP8266 development was done using  [PlatformIO](http://platformio.org/), is also possible to use the [Arduino IDE](https://www.arduino.cc/en/Main/Software) with little work 
+- Although the ESP8266 development was done using  [PlatformIO](http://platformio.org/), is also possible to use the [Arduino IDE](https://www.arduino.cc/en/Main/Software) with little work
 
 ## Tutorial
 
@@ -53,6 +53,18 @@ mqttClientName | my-iot-sensor |
 First you need to [Sign up for an free trial account on SAP HANA Cloud Platform](http://go.sap.com/developer/tutorials/hcp-create-trial-account.html), this is where the app will be hosted, the device registeres and the messages handled.
 
 If you would like to know more about HCP check one of the online courses at [OpenSAP](https://open.sap.com/courses).
+
+You can know fill on your cheat sheet:
+
+Variable | Example | Your Values
+---------|---------|------------
+hcpAccount | p123456trial |
+hcpUser | p123456 |
+hcpPassword | 654321 |
+
+### Configure Internet of Thing Services
+
+Now you have to configure [SAP HANA Cloud Platform Internet of Things Services](https://help.hana.ondemand.com/iot/), for that, first [enable the service](https://help.hana.ondemand.com/iot/frameset.htm?53ad6006e50f4b0ca02402daa6da5bb5.html) itself, then [assign the required role](https://help.hana.ondemand.com/iot/frameset.htm?c8532bcf28754b248dec71a518463865.html) to your user.
 
 ## References
 
