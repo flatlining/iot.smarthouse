@@ -20,14 +20,6 @@ long lastRead = 0;
 float lastHumidity = 0;
 float lastTemperature = 0;
 
-// hcp
-const char* hcpAccount = "<TODO:hcp_account_name>";
-const char* deviceId = "<TODO:device_id_on_iot_services>";
-const char* topicData = "<TODO:mqtt_topic_to_send_data>";
-const char* topicPush = "<TODO:mqtt_topic_to_receive_data>";
-const char* messageTypeHumidity = "<TODO:message_type_on_iot_services_for_humidity>";
-const char* messageTypeTemperature = "<TODO:message_type_on_iot_services_for_temperature>";
-
 void callback(char* topic, byte* payload, unsigned int length) {
         char pay[length+1];
         for (int i = 0; i < length; i++) {
@@ -47,19 +39,19 @@ void callback(char* topic, byte* payload, unsigned int length) {
                 Serial.println("json]\tparseObject() failed");
                 return;
         }
-        const char* isOn = root["messages"][0]["isOn"];
-        if (strcmp(isOn, "true") == 0) {
-                Serial.println("led]\tOn");
-                digitalWrite(LEDPIN, HIGH);
-        } else if (strcmp(isOn, "false") == 0) {
-                digitalWrite(LEDPIN, LOW);
-                Serial.println("led]\tOff");
-        }
+        int lightId = atoi(root["messages"][0]["lightId"]);
+        Serial.print("led]\tId: ");
+        Serial.print(lightId);
+        Serial.print(", from ");
+        Serial.print(digitalRead(lightId));
+        Serial.print(" to ");
+        digitalWrite(lightId, !digitalRead(lightId));
+        Serial.println(digitalRead(lightId));
 }
 
 void setup() {
         delay(500);
-        Serial.begin(115200);
+        Serial.begin(9600);
 
         pinMode(LEDPIN, OUTPUT);
 
