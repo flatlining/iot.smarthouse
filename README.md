@@ -1,5 +1,7 @@
 # IoT Smart House
 
+A simple project that showcases the use of [Hana Cloud Platform](https://account.hanatrial.ondemand.com/) service for [Internet of Things](https://hcp.sap.com/capabilities/iot.html) conecting to a [ESP3266](https://espressif.com/en/products/hardware/esp8266ex/overview) board using the [mqtt](http://mqtt.org/) protocol.
+
 ## References
 
 * [SAP HANA Cloud Platform Internet of Things Services](https://help.hana.ondemand.com/iot/frameset.htm)
