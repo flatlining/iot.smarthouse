@@ -24,7 +24,7 @@ A simple project that showcases the use of [Hana Cloud Platform](https://account
 
 ## Tutorial
 
-### Cheat Sheet
+#### Cheat Sheet
 
 During the deployment of the solution, some customization with your personal data will be required. to make it easy to remember values that need to be customized is recomender to copy-paste the following cheat sheet:
 
@@ -47,6 +47,12 @@ wifiPassword | mySuperSTRONGP4ssw0rd |
 mqttServer | iot.eclipse.org |
 mqttServerPort | 1883 |
 mqttClientName | my-iot-sensor |
+
+### Create a HCP account
+
+First you need to [Sign up for an free trial account on SAP HANA Cloud Platform](http://go.sap.com/developer/tutorials/hcp-create-trial-account.html), this is where the app will be hosted, the device registeres and the messages handled.
+
+If you would like to know more about HCP check one of the online courses at [OpenSAP](https://open.sap.com/courses).
 
 ## References
 
