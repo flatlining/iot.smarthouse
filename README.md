@@ -205,11 +205,11 @@ All placeholders use the pattern **&lt;TODO:placeHolderName&gt;**, so simply use
 
 #### App code to HCP
 
-~under construction~
+It's not on the scope of this tutorial to tech how to deploy a HTML application to HCP, you can check the [official documentation](https://sapui5.hana.ondemand.com/) for help.
 
 #### Firmware to ESP8266
 
-~under construction~
+It's not on the scope of this tutorial to tech how to upload a firmware to the ESP8266, you can check the [Arduino documentation](https://www.arduino.cc/en/Main/Howto) for help
 
 ### Conclusion
 
