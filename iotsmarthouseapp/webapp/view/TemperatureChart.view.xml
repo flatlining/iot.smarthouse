@@ -19,7 +19,7 @@
 			<viz:VizFrame id="temperatureChart-vizFrame-chart" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType="timeseries_line"
 				legendVisible="false">
 				<viz:dataset>
-					<viz.data:FlattenedDataset data="{/<TODO:temperature_endpoint_on_message_service>}">
+					<viz.data:FlattenedDataset data="{/<TODO:msgSrvTemperatureEndpoint>}">
 						<viz.data:dimensions>
 							<viz.data:DimensionDefinition name="{i18n>date}" value="{G_CREATED}" dataType="date"/>
 						</viz.data:dimensions>

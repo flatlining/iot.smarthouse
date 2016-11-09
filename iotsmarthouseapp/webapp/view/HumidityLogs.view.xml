@@ -18,7 +18,7 @@
 		</customHeader>
 		<content>
 			<Table id="humidityLogs-table-logs" inset="false"
-				items="{ path: '/<TODO:humidity_endpoint_on_message_service>', sorter: { path: 'G_CREATED', descending: 'true' } }" growing="true" growingThreshold="15">
+				items="{ path: '/<TODO:msgSrvHumidityEndpoint>', sorter: { path: 'G_CREATED', descending: 'true' } }" growing="true" growingThreshold="15">
 				<columns>
 					<Column>
 						<Text text="{i18n>created}"/>
