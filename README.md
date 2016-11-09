@@ -156,6 +156,65 @@ mqttServer | iot.eclipse.org |
 mqttServerPort | 1883 |
 mqttClientName | my-iot-sensor |
 
+#### MQTT topics
+
+Open the tile **Messaging through MQTT over TCP/SSL** on the MMS Cockpit, paste the previously noted *iotSrvDeviceId* on the **Device ID** input field.
+
+And take note of the **Topic** of the **Publish Message** section and **Push Topic** of the **Subscribe Message** section.
+
+You can know fill on your cheat sheet:
+
+Variable | Example | Your Values
+---------|---------|------------
+msgSrvMqttDataTopic | iot/data/iotmmsp123456trial/v1/b3da17f6-8e41-48e4-8540-9bfe5124f7ec |
+msgSrvMqttPushTopic | iot/push/iotmmsp123456trial/v1/b3da17f6-8e41-48e4-8540-9bfe5124f7ec |
+
+### OData Service and Endpoint
+
+To findout your MMS service endpoint open the tile **Display stored messages** and then click on **OData API** button you can check on the popup your service metadata url.
+
+By open the *$metadata* url you can check all the tables available on the service, each table is related to a Message Type on the IoT Service.
+
+Keep in mind that each table is only created once the first message to it's message type arrive, so unless you have [posted something](https://help.hana.ondemand.com/iot/frameset.htm?8e1c277be0cd4854943a15f86188aaec.html) to your previously created Message Types no table will be displayed for them. Luckily the naming convention for table is **T\_IOT_[MESSAGE_TYPE_ID_IN_UPPERCASE]**, so if your Message Type ID is *f7a21c819057c93f4ae2* the related table will be *T\_IOT_T_IOT_F7A21C819057C93F4AE2*, using this rules is easy do infer your endpoints.
+
+You can know fill on your cheat sheet:
+
+Variable | Example | Your Values
+---------|---------|------------
+msgSrvHumidityEndpoint | T_IOT_F7A21C819057C93F4AE2 |
+msgSrvTemperatureEndpoint | T_IOT_3E379B643794DFA2FC6D |
+
+### Wi-Fi Information
+
+For Wi-Fi you will only need the name of the netword(ssid) and the password to connect, as if you were connecting with a computer.
+
+You can know fill on your cheat sheet:
+
+Variable | Example | Your Values
+---------|---------|------------
+wifiSsid | MyHomeInternet |
+wifiPassword | mySuperSTRONGP4ssw0rd |
+
+### Customizing App code and ESP8266 firmware
+
+At this point you should have you **cheat sheet* filled, now you only need to replace the placeholders in both the app (*iotsmarthouseapp* folder) and the firmware (*iotsmarthouseesp* folder).
+
+All placeholders use the pattern **&lt;TODO:placeHolderName&gt;**, so simply use the **Search in Directory** function of [Atom](https://atom.io/) to search and replace each variable on the cheat sheet, e.g.: search for &lt;TODO:wifiSsid&gt; and replace it with *MyHomeInternet*.
+
+### Deployment
+
+#### App code to HCP
+
+~under construction~
+
+#### Firmware to ESP8266
+
+~under construction~
+
+### Conclusion
+
+You must now have a working IoT application work, and by accessing you app url you must be able to see Temperature and Humidity logs as well as control the led via web.
+
 ## References
 
 * [SAP HANA Cloud Platform Internet of Things Services](https://help.hana.ondemand.com/iot/frameset.htm)
