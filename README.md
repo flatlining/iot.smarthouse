@@ -2,7 +2,11 @@
 
 A simple project that showcases the use of [Hana Cloud Platform](https://account.hanatrial.ondemand.com/) service for [Internet of Things](https://hcp.sap.com/capabilities/iot.html) connecting to a [ESP3266](https://espressif.com/en/products/hardware/esp8266ex/overview) board using the [mqtt](http://mqtt.org/) protocol.
 
-## How to contribute
+## Reinnovate
+
+The reinnovate presentations can be found on the `/doc/` root folder.
+
+## Contribute
 
 If you want to contribute by adding features or fixing bugs feel free to create a [pull resquest](https://github.com/flatlining/iot.smarthouse/pulls) or open an [issue](https://github.com/flatlining/iot.smarthouse/issues).
 
