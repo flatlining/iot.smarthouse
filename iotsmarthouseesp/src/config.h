@@ -1,5 +1,5 @@
 // wifi
-const char* wifiSsid = "<TODO:wifiSsid>"";
+const char* wifiSsid = "<TODO:wifiSsid>";
 const char* wifiPassword = "<TODO:wifiPassword>";
 
 // mqtt
