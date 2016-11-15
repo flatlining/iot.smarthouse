@@ -51,7 +51,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
 void setup() {
         delay(500);
-        Serial.begin(9600);
+        Serial.begin(115200);
 
         pinMode(LEDPIN, OUTPUT);
 
