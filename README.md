@@ -39,6 +39,19 @@ If you want to contribute by adding features or fixing bugs feel free to create 
 
 ## Tutorial
 
+### Cloning and Submoduling
+
+Since the required MQTT payload size of this project is bigger than the one provided by the [pubsubclient](https://github.com/knolleary/pubsubclient) library, a custom version of it is used.
+
+So, after cloning the project, initialize it's submodules:
+
+```bash
+$ git submodule init
+$ git submodule update
+```
+
+And change the value of the `MQTT_MAX_PACKET_SIZE` variable on the *iot.smarthouse/iotsmarthouseesp/lib/pubsubclient/PubSubClient.h* to **256**.
+
 #### Cheat Sheet
 
 During the deployment of the solution, some customization with your personal data will be required. to make it easy to remember values that need to be customized is recommended to copy-paste the following cheat sheet:
