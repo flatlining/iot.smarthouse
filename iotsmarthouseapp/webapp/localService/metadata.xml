@@ -1,0 +1,132 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="com.sap.iotservices.mms">
+            <EntityType Name="entity0">
+                <Key>
+                    <PropertyRef Name="G_DEVICE"/>
+                    <PropertyRef Name="G_CREATED"/>
+                    <PropertyRef Name="C_HUMIDITY"/>
+                </Key>
+                <Property
+                    xmlns:mms="com.sap.iotservices.mms" Name="G_DEVICE" Type="Edm.String" mms:ColumnName="G_DEVICE"/>
+                    <Property
+                        xmlns:mms="com.sap.iotservices.mms" Name="G_CREATED" Type="Edm.DateTime" mms:ColumnName="G_CREATED"/>
+                        <Property
+                            xmlns:mms="com.sap.iotservices.mms" Name="C_HUMIDITY" Type="Edm.Double" mms:ColumnName="C_HUMIDITY"/>
+                        </EntityType>
+                        <EntityType Name="entity1">
+                            <Key>
+                                <PropertyRef Name="G_DEVICE"/>
+                                <PropertyRef Name="G_CREATED"/>
+                                <PropertyRef Name="C_TEMPERATURE"/>
+                            </Key>
+                            <Property
+                                xmlns:mms="com.sap.iotservices.mms" Name="G_DEVICE" Type="Edm.String" mms:ColumnName="G_DEVICE"/>
+                                <Property
+                                    xmlns:mms="com.sap.iotservices.mms" Name="G_CREATED" Type="Edm.DateTime" mms:ColumnName="G_CREATED"/>
+                                    <Property
+                                        xmlns:mms="com.sap.iotservices.mms" Name="C_TEMPERATURE" Type="Edm.Double" mms:ColumnName="C_TEMPERATURE"/>
+                                    </EntityType>
+                                    <EntityType Name="entity2">
+                                        <Key>
+                                            <PropertyRef Name="G_CREATED"/>
+                                            <PropertyRef Name="C_KEY"/>
+                                            <PropertyRef Name="C_VALUE"/>
+                                        </Key>
+                                        <Property
+                                            xmlns:mms="com.sap.iotservices.mms" Name="G_CREATED" Type="Edm.DateTime" mms:ColumnName="G_CREATED"/>
+                                            <Property
+                                                xmlns:mms="com.sap.iotservices.mms" Name="C_KEY" Type="Edm.String" mms:ColumnName="C_KEY"/>
+                                                <Property
+                                                    xmlns:mms="com.sap.iotservices.mms" Name="C_VALUE" Type="Edm.String" mms:ColumnName="C_VALUE"/>
+                                                </EntityType>
+                                                <EntityType Name="entity3">
+                                                    <Key>
+                                                        <PropertyRef Name="G_DEVICE"/>
+                                                        <PropertyRef Name="G_CREATED"/>
+                                                        <PropertyRef Name="C_SENSOR"/>
+                                                        <PropertyRef Name="C_VALUE"/>
+                                                        <PropertyRef Name="C_TIMESTAMP"/>
+                                                    </Key>
+                                                    <Property
+                                                        xmlns:mms="com.sap.iotservices.mms" Name="G_DEVICE" Type="Edm.String" mms:ColumnName="G_DEVICE"/>
+                                                        <Property
+                                                            xmlns:mms="com.sap.iotservices.mms" Name="G_CREATED" Type="Edm.DateTime" mms:ColumnName="G_CREATED"/>
+                                                            <Property
+                                                                xmlns:mms="com.sap.iotservices.mms" Name="C_SENSOR" Type="Edm.String" mms:ColumnName="C_SENSOR"/>
+                                                                <Property
+                                                                    xmlns:mms="com.sap.iotservices.mms" Name="C_VALUE" Type="Edm.String" mms:ColumnName="C_VALUE"/>
+                                                                    <Property
+                                                                        xmlns:mms="com.sap.iotservices.mms" Name="C_TIMESTAMP" Type="Edm.DateTime" mms:ColumnName="C_TIMESTAMP"/>
+                                                                    </EntityType>
+                                                                    <EntityType Name="entity4">
+                                                                        <Key>
+                                                                            <PropertyRef Name="C_DEVICEID"/>
+                                                                            <PropertyRef Name="C_SEQUENCEID"/>
+                                                                            <PropertyRef Name="C_STATUS"/>
+                                                                            <PropertyRef Name="C_PHASE"/>
+                                                                            <PropertyRef Name="C_MSG"/>
+                                                                            <PropertyRef Name="G_CREATED"/>
+                                                                        </Key>
+                                                                        <Property
+                                                                            xmlns:mms="com.sap.iotservices.mms" Name="C_DEVICEID" Type="Edm.String" mms:ColumnName="C_DEVICEID"/>
+                                                                            <Property
+                                                                                xmlns:mms="com.sap.iotservices.mms" Name="C_SEQUENCEID" Type="Edm.String" mms:ColumnName="C_SEQUENCEID"/>
+                                                                                <Property
+                                                                                    xmlns:mms="com.sap.iotservices.mms" Name="C_STATUS" Type="Edm.String" mms:ColumnName="C_STATUS"/>
+                                                                                    <Property
+                                                                                        xmlns:mms="com.sap.iotservices.mms" Name="C_PHASE" Type="Edm.Int32" mms:ColumnName="C_PHASE"/>
+                                                                                        <Property
+                                                                                            xmlns:mms="com.sap.iotservices.mms" Name="C_MSG" Type="Edm.String" mms:ColumnName="C_MSG"/>
+                                                                                            <Property
+                                                                                                xmlns:mms="com.sap.iotservices.mms" Name="G_CREATED" Type="Edm.DateTime" mms:ColumnName="G_CREATED"/>
+                                                                                            </EntityType>
+                                                                                            <EntityType Name="entity5">
+                                                                                                <Key>
+                                                                                                    <PropertyRef Name="G_CREATED"/>
+                                                                                                    <PropertyRef Name="G_METRIC"/>
+                                                                                                    <PropertyRef Name="G_VALUE"/>
+                                                                                                    <PropertyRef Name="G_COMPONENT"/>
+                                                                                                    <PropertyRef Name="G_PROCESS"/>
+                                                                                                </Key>
+                                                                                                <Property
+                                                                                                    xmlns:mms="com.sap.iotservices.mms" Name="G_CREATED" Type="Edm.DateTime" mms:ColumnName="G_CREATED"/>
+                                                                                                    <Property
+                                                                                                        xmlns:mms="com.sap.iotservices.mms" Name="G_METRIC" Type="Edm.String" mms:ColumnName="G_METRIC"/>
+                                                                                                        <Property
+                                                                                                            xmlns:mms="com.sap.iotservices.mms" Name="G_VALUE" Type="Edm.Double" mms:ColumnName="G_VALUE"/>
+                                                                                                            <Property
+                                                                                                                xmlns:mms="com.sap.iotservices.mms" Name="G_COMPONENT" Type="Edm.String" mms:ColumnName="G_COMPONENT"/>
+                                                                                                                <Property
+                                                                                                                    xmlns:mms="com.sap.iotservices.mms" Name="G_PROCESS" Type="Edm.String" mms:ColumnName="G_PROCESS"/>
+                                                                                                                </EntityType>
+                                                                                                                <EntityType Name="entitySet">
+                                                                                                                    <Key>
+                                                                                                                        <PropertyRef Name="name"/>
+                                                                                                                    </Key>
+                                                                                                                    <Property Name="schema" Type="Edm.String"/>
+                                                                                                                    <Property Name="name" Type="Edm.String" m:FC_TargetPath="SyndicationTitle"/>
+                                                                                                                    <Property Name="count" Type="Edm.String"/>
+                                                                                                                </EntityType>
+                                                                                                                <EntityContainer
+                                                                                                                    xmlns:mms="com.sap.iotservices.mms" Name="NEO_0EVDFBNAZBHO3U5Y6IQVT0IPC" m:IsDefaultEntityContainer="true" mms:SchemaName="NEO_0EVDFBNAZBHO3U5Y6IQVT0IPC">
+                                                                                                                    <EntitySet Name="count" EntityType="com.sap.iotservices.mms.entitySet"/>
+                                                                                                                    <EntitySet
+                                                                                                                        xmlns:mms="com.sap.iotservices.mms" Name="T_IOT_F7A21B819054C93F4EE2" EntityType="com.sap.iotservices.mms.entity0" mms:TableName="T_IOT_F7A21B819054C93F4EE2"/>
+                                                                                                                        <EntitySet
+                                                                                                                            xmlns:mms="com.sap.iotservices.mms" Name="T_IOT_3E350B643794BFA2FB5D" EntityType="com.sap.iotservices.mms.entity1" mms:TableName="T_IOT_3E350B643794BFA2FB5D"/>
+                                                                                                                            <EntitySet
+                                                                                                                                xmlns:mms="com.sap.iotservices.mms" Name="T_IOT_CONFIG" EntityType="com.sap.iotservices.mms.entity2" mms:TableName="T_IOT_CONFIG"/>
+                                                                                                                                <EntitySet
+                                                                                                                                    xmlns:mms="com.sap.iotservices.mms" Name="T_IOT_M0T0Y0P0E1" EntityType="com.sap.iotservices.mms.entity3" mms:TableName="T_IOT_M0T0Y0P0E1"/>
+                                                                                                                                    <EntitySet
+                                                                                                                                        xmlns:mms="com.sap.iotservices.mms" Name="T_IOT_ACKSTORE" EntityType="com.sap.iotservices.mms.entity4" mms:TableName="T_IOT_ACKSTORE"/>
+                                                                                                                                        <EntitySet
+                                                                                                                                            xmlns:mms="com.sap.iotservices.mms" Name="T_IOT_MONITOR_LOG" EntityType="com.sap.iotservices.mms.entity5" mms:TableName="T_IOT_MONITOR_LOG"/>
+                                                                                                                                        </EntityContainer>
+                                                                                                                                    </Schema>
+                                                                                                                                </edmx:DataServices>
+                                                                                                                            </edmx:Edmx>
