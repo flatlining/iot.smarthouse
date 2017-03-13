@@ -2,9 +2,11 @@
 
 A simple project that showcases the use of [Hana Cloud Platform](https://account.hanatrial.ondemand.com/) service for [Internet of Things](https://hcp.sap.com/capabilities/iot.html) connecting to a [ESP3266](https://espressif.com/en/products/hardware/esp8266ex/overview) board using the [mqtt](http://mqtt.org/) protocol.
 
-## Reinnovate
+## Presentations
 
-The reinnovate presentations can be found on the `/doc/` root folder.
+The [reinnovate presentations](./doc/Controlling the Internet of Things.pdf) can be found on the `/doc/` root folder.
+
+The [DKOM 2017](./doc/SCP talking with the real worlds.pdf) can be found on the `/doc/` root folder.
 
 ## Contribute
 
